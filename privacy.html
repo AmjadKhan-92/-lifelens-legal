@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Privacy Policy for LifeLens: Voice & Vision Guide for Android by NovaX Apps.">
+  <meta name="robots" content="index,follow">
+  <title>Privacy Policy - LifeLens: Voice & Vision Guide</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="container">
+    <nav aria-label="Legal pages">
+      <a href="index.html">Home</a>
+      <a href="privacy.html" aria-current="page">Privacy Policy</a>
+      <a href="terms.html">Terms and Conditions</a>
+    </nav>
+
+    <header>
+      <div class="badge">Privacy Policy</div>
+      <h1>Privacy Policy for LifeLens</h1>
+      <p class="meta">
+        <strong>Application:</strong> LifeLens: Voice &amp; Vision Guide (<code>com.novax.lifelens</code>)<br>
+        <strong>Publisher and data controller:</strong> NovaX Apps, Karachi, Pakistan<br>
+        <strong>Effective date:</strong> October 18, 2026<br>
+        <strong>Last updated:</strong> October 21, 2026
+      </p>
+    </header>
+
+    <h2>1. Introduction</h2>
+    <p>NovaX Apps built <strong>LifeLens: Voice &amp; Vision Guide</strong> as an AI-powered accessibility and visual assistance app. It helps people identify objects, read documents and labels, understand medicines, recognise hazards and hear explanations.</p>
+    <p>LifeLens has <strong>no accounts, no sign-in, no advertising and no analytics SDK</strong>. NovaX Apps does not operate a backend server that receives or stores your photos, voice, scans, chat messages or personal details. This policy explains what happens on your device and when data is sent directly to a third-party service.</p>
+
+    <div class="note">
+      <strong>Short version:</strong> your history and settings stay on your phone. When you use cloud AI, your image or text is sent directly from the app to Google's Gemini API over HTTPS. We do not receive it. You can delete local data in the app or by uninstalling LifeLens.
+    </div>
+
+    <h2>2. Information the App Accesses</h2>
+
+    <h3>Camera and images</h3>
+    <ul>
+      <li><strong>Permission:</strong> <code>android.permission.CAMERA</code>. The camera hardware is optional; you can use the gallery picker instead.</li>
+      <li><strong>Used for:</strong> capturing a photo when you tap Scan, or an image you choose from your gallery.</li>
+      <li><strong>Cloud processing:</strong> when cloud AI is used, the image is downscaled on your device (longest side up to 1024 pixels) and sent over encrypted HTTPS/TLS directly to the <strong>Google Gemini API</strong> to generate the answer. NovaX Apps does not operate a relay and does not receive your image.</li>
+      <li><strong>On-device processing:</strong> if you download the optional on-device AI, the image can be analysed locally and no image leaves your phone.</li>
+      <li><strong>Retention:</strong> NovaX Apps does not receive, store or sell your images. Google processes the request under its own terms and privacy policy.</li>
+      <li><strong>Offline queue:</strong> a scan captured while offline is stored on your device and analysed later when cloud AI or the on-device model is available.</li>
+    </ul>
+
+    <h3>Microphone and voice</h3>
+    <ul>
+      <li><strong>Permission:</strong> <code>android.permission.RECORD_AUDIO</code>.</li>
+      <li><strong>Used for:</strong> hearing a spoken question or voice command when you tap the microphone or use the voice agent.</li>
+      <li><strong>Processing:</strong> speech is converted to text by Android's standard speech recognition service. Depending on your device and settings, that service may process audio on Google's servers. If you download the optional <strong>Whisper</strong> offline voice model, transcription happens entirely on your phone.</li>
+      <li><strong>Retention:</strong> NovaX Apps does not receive, store or upload your audio recordings or the resulting transcript. If you send a voice question to cloud AI, the transcript and your question go directly to Google.</li>
+    </ul>
+
+    <h3>Live companion and chat</h3>
+    <p>The <strong>Live</strong> companion can name objects and warn about hazards. It uses the on-device vision model when available; when online, a throttled cloud explanation may also be requested. The <strong>Chat</strong> tab is answered by cloud Gemini when online or by the optional on-device model. Chat conversations and chat photos are stored locally on your device so you can reopen them.</p>
+    <p>When you choose to report an AI response, LifeLens opens your email app with a pre-filled message. Nothing is sent until you review and send the email yourself. The report contains the response text, your optional comment, the app version, Android version and device locale.</p>
+
+    <h3>Local storage on your device</h3>
+    <ul>
+      <li>Language, voice speed, auto-speak, proxy configuration and other preferences.</li>
+      <li>The optional display name you give for greetings.</li>
+      <li>Scan history: the latest explanations, stored as text on this device.</li>
+      <li>Pending scans waiting for cloud AI or an on-device model.</li>
+      <li>Chat conversations and chat photos.</li>
+      <li>Medicine cabinet: name, purpose and expiry date.</li>
+      <li>Reminders and their alarm schedules.</li>
+      <li>Emergency Card: medical ID details, encrypted at rest with the Android Keystore.</li>
+      <li>Cached translations and custom API or proxy settings, if you enter any.</li>
+      <li>Downloaded on-device AI and offline voice model files.</li>
+    </ul>
+
+    <h3>Device and technical information</h3>
+    <p>LifeLens contains no analytics, crash-reporting or advertising SDKs. It does not collect advertising IDs, precise location, contacts or your installed-app list. When cloud AI is used, Google receives the image or text you submitted and standard request metadata such as your IP address, app/API client information and request time under Google's own privacy policy. NovaX Apps does not add an install identifier and does not run a server that receives these requests.</p>
+
+    <h3>Notifications and alarms</h3>
+    <p>With <code>android.permission.POST_NOTIFICATIONS</code>, LifeLens can show medicine reminders and scheduled-scan alerts. With <code>android.permission.SCHEDULE_EXACT_ALARM</code>, it can deliver reminders at the time you choose on Android 12 and later. These permissions are used only for features you enable, never for advertising.</p>
+
+    <h3>Barcodes, QR codes, sharing and links</h3>
+    <p>Barcodes and QR codes are decoded on your device. If you open a link, share an explanation, share the Emergency Card or send a report, Android hands the data to the app you choose. That app or website then applies its own privacy policy.</p>
+
+    <h2>3. Permissions Summary</h2>
+    <table>
+      <tr><th>Permission</th><th>Purpose</th><th>When it is requested</th></tr>
+      <tr><td><code>CAMERA</code></td><td>Scan and describe what is in front of you</td><td>Before the first camera use, after a prominent in-app disclosure</td></tr>
+      <tr><td><code>RECORD_AUDIO</code></td><td>Spoken questions and voice commands</td><td>Before the first microphone use, after a prominent in-app disclosure</td></tr>
+      <tr><td><code>POST_NOTIFICATIONS</code></td><td>Medicine and scheduled-scan reminders</td><td>When you first create a reminder or schedule a scan</td></tr>
+      <tr><td><code>SCHEDULE_EXACT_ALARM</code></td><td>Deliver reminders at the exact chosen time</td><td>When Android requires approval for a reminder</td></tr>
+      <tr><td><code>INTERNET</code>, <code>ACCESS_NETWORK_STATE</code></td><td>Cloud AI and model downloads; detect offline mode</td><td>Normal app operation</td></tr>
+      <tr><td><code>VIBRATE</code>, <code>RECEIVE_BOOT_COMPLETED</code></td><td>Haptic feedback and restoring reminders after restart</td><td>Normal app operation</td></tr>
+    </table>
+    <p>You can deny camera, microphone or notification access and still use other parts of LifeLens. You can change permissions at any time in Android Settings.</p>
+
+    <h2>4. On-Device AI and Offline Voice Models</h2>
+    <p>If you download the optional on-device AI or offline voice models, their files are fetched over HTTPS from <strong>Hugging Face</strong> and run entirely on your phone. Examples include Qwen2.5 (Apache-2.0) and Whisper (MIT). After download, offline scan explanation, offline chat, offline voice transcription, barcode decoding and reading the Emergency Card happen without sending data to NovaX Apps. You can delete either model in Settings.</p>
+
+    <h2>5. Third-Party Services</h2>
+    <table>
+      <tr><th>Provider</th><th>Purpose</th><th>Data involved</th></tr>
+      <tr><td>Google Gemini API</td><td>Cloud vision and language answers; cloud chat</td><td>The downscaled image, your question or chat text, language setting and standard request metadata</td></tr>
+      <tr><td>Android Speech Recognition</td><td>Speech-to-text when you use the microphone</td><td>Audio, handled according to your device and Android settings</td></tr>
+      <tr><td>Hugging Face</td><td>One-time on-device model download</td><td>Download request and standard network metadata</td></tr>
+      <tr><td>Google Play Services</td><td>App install, updates and Play services</td><td>Store and device information handled by Google</td></tr>
+      <tr><td>Your email provider</td><td>Support and AI-response reports you choose to send</td><td>Your email address, message and any details you include</td></tr>
+    </table>
+    <p>We do <strong>not</strong> sell or rent personal data and do <strong>not</strong> use it for advertising. See <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google's Privacy Policy</a>, <a href="https://huggingface.co/privacy" target="_blank" rel="noopener">Hugging Face's Privacy Policy</a> and your email provider's policy.</p>
+
+    <h2>6. Data Retention and Deletion</h2>
+    <ul>
+      <li><strong>Scan history:</strong> open Saved Scans and clear it.</li>
+      <li><strong>Chat history and chat photos:</strong> open Chat history and choose Clear all chats.</li>
+      <li><strong>Medicines and reminders:</strong> remove each item in the app.</li>
+      <li><strong>Emergency Card:</strong> clear the fields and save.</li>
+      <li><strong>Pending scans and translations:</strong> cleared by the in-app reset or by clearing app data.</li>
+      <li><strong>All local data:</strong> Android Settings, Apps, LifeLens, Storage, Clear data, or uninstall the app.</li>
+      <li><strong>Email requests:</strong> support emails remain in the mailbox until you or the publisher delete them.</li>
+    </ul>
+    <p>NovaX Apps holds no server-side account or database from which to delete app content. Data already processed by Google or Hugging Face is governed by their retention policies; you can use their account and privacy controls to manage it.</p>
+
+    <h2>7. AI Accuracy, Medical and Safety Disclaimer</h2>
+    <div class="alert-box">
+      <strong>Medical and safety disclaimer:</strong><br>
+      LifeLens is an informational accessibility tool. It is not a doctor, pharmacist, emergency service, lawyer or certified safety inspector. AI can be wrong, misread labels, or miss hazards. Never change medication doses or delay emergency care based on the app. Always verify medicine details with a licensed professional.
+    </div>
+    <p>Guidance about chemicals, electricity, machinery, vehicles, farming and first aid is informational only. Follow the product label and official guidance, and call your local emergency number when in doubt.</p>
+
+    <h2>8. Data Security</h2>
+    <ul>
+      <li>Encryption in transit with HTTPS/TLS for cloud AI and model downloads. Cleartext HTTP is disabled.</li>
+      <li>The Emergency Card and any custom API or proxy secrets are encrypted at rest with AES-256-GCM and keys held by the Android Keystore.</li>
+      <li>Screenshots and recent-app previews are blocked while sensitive screens are open, including the Emergency Card, medicine cabinet, chat history, cloud settings, privacy policy and terms.</li>
+      <li>Android backup is disabled for the app, and sensitive preferences are excluded from backup and device transfer.</li>
+      <li>The app performs a signature-integrity check before sending cloud requests and can refuse cloud access in a modified build or hostile environment.</li>
+    </ul>
+    <p>No method of transmission or storage is completely secure. Use a device lock and keep Android updated.</p>
+
+    <h2>9. Publisher-Supplied Cloud API Key</h2>
+    <p>Cloud features use a Google Gemini API key supplied by the publisher, so you do not need your own account. The key is a technical credential, not personal data. Do not extract, publish, share or abuse it. Abuse can be blocked, rate-limited or reported. If you configure your own API key or self-hosted proxy, you are responsible for that service and its terms.</p>
+
+    <h2>10. Children's Privacy</h2>
+    <p>LifeLens is intended for general audiences aged 13 and above and is not directed to children under 13. The app does not knowingly collect personal information from children. Because there are no accounts and no publisher-side collection, a child's local scans and history remain on the device.</p>
+
+    <h2>11. Your Rights</h2>
+    <p>Depending on where you live, you may have rights under the GDPR, UK GDPR, CCPA/CPRA or similar laws, including the right to access, correct, delete, restrict or object to processing, and the right to data portability. Because LifeLens has no account and no publisher-side database, you can exercise most of these rights directly on your device:</p>
+    <ul>
+      <li>Access and review your local data in Saved Scans, Chat history, My Medicines, Reminders and the Emergency Card.</li>
+      <li>Delete data using the in-app clear actions, Android Clear data, or uninstall.</li>
+      <li>Withdraw camera, microphone or notification permission in Android Settings.</li>
+      <li>Turn off cloud use by staying offline or using the optional on-device model.</li>
+      <li>Email <a href="mailto:amjidiqbal5392@gmail.com">amjidiqbal5392@gmail.com</a> for privacy questions or requests. We may need to ask for enough information to respond, but we do not hold an account profile to look up.</li>
+    </ul>
+    <p>We do not sell personal information. We do not share personal information for cross-context behavioural advertising.</p>
+
+    <h3>Legal bases for processing</h3>
+    <ul>
+      <li><strong>Consent:</strong> camera, microphone, notifications and optional model downloads, which you can withdraw at any time.</li>
+      <li><strong>Performance of the service:</strong> processing a scan, chat or reminder you request.</li>
+      <li><strong>Legitimate interests:</strong> security, fraud and abuse prevention, integrity checks and keeping the app working.</li>
+      <li><strong>Legal obligations:</strong> responding to lawful requests where applicable.</li>
+    </ul>
+
+    <h3>International transfers</h3>
+    <p>Google, Hugging Face and your email provider may process data in countries other than yours, including the United States. Their privacy policies describe the safeguards they use. NovaX Apps does not maintain a separate international data transfer of app content because it does not receive that content.</p>
+
+    <h2>12. Third-Party Links</h2>
+    <p>LifeLens may open links to Google, Hugging Face, model licences, support pages or other websites you choose. Those sites are not controlled by NovaX Apps and have their own privacy policies. Review them before sharing information.</p>
+
+    <h2>13. Changes to This Policy</h2>
+    <p>We may update this policy and will change the Last updated date at the top. Material changes will be surfaced in the app or on this page. Continued use after an update means you accept the revised policy.</p>
+
+    <h2>14. Contact</h2>
+    <p>
+      <strong>Publisher and data controller:</strong> NovaX Apps, Karachi, Pakistan<br>
+      <strong>Email:</strong> <a href="mailto:amjidiqbal5392@gmail.com">amjidiqbal5392@gmail.com</a><br>
+      <strong>App package:</strong> <code>com.novax.lifelens</code>
+    </p>
+    <p>For a deletion or privacy request, include the app name and enough detail for us to understand the request. Do not send medical records or identity documents unless specifically asked.</p>
+
+    <footer>
+      &copy; 2026 NovaX Apps. All rights reserved. LifeLens: Voice &amp; Vision Guide.
+    </footer>
+  </main>
+</body>
+</html>
